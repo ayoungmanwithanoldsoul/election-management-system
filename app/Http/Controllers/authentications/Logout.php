@@ -17,16 +17,25 @@ class Logout extends Controller
             ->getName();
 
         if (str_contains($route, 'admin')) {
-            $this->adminLogout();
+            return $this->adminLogout();
         } else {
-            $this->voterLogout();
+            return $this->voterLogout();
         }
 
     }
 
     private function adminLogout()
     {
-        return;
+        session()->forget([
+            'logged',
+            'user',
+            'id',
+            'firstname',
+            'lastname',
+            'department',
+            'username'
+        ]);
+        return redirect()->route('admin-auth-login');
     }
 
     private function voterLogout()

@@ -49,19 +49,19 @@ class Register extends Controller
             if (!$query) {
                 return redirect()->back()->with('errorMsg', 'We cant create your account right now. Please try again later');
             } else {
-                $query = (array) DB::connection($department)
+                $query =DB::connection($department)
                     ->select('SELECT id, voted, id_number FROM voters WHERE id_number = ? AND hash = ?', [$idnumber, $hash])[0];
             }
             session([
                 'logged'     => true,
                 'user'       => 'voter',
-                'id'         => $query['id'],
+                'id'         => $query->id,
                 'firstname'  => $firstname,
                 'lastname'   => $lastname,
                 'department' => $department,
                 'level'      => $level,
-                'voted'      => $query['voted'],
-                'idnumber'   => $query['id_number']
+                'voted'      => $query->voted,
+                'idnumber'   => $query->id_number
             ]);
 
             return redirect('/vote');

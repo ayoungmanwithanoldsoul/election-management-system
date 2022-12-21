@@ -35,6 +35,32 @@
     <div class="container-xxl">
         <div class="authentication-wrapper authentication-basic container-p-y">
             <div class="authentication-inner">
+                @if (session('visited') != null)
+                    <div class="alert alert-danger alert-dismissible w-100" role="alert">
+                        <h6 class="alert-heading d-flex align-items-center fw-bold mb-1">Error!!</h6>
+                        <p class="mb-0">{{ session('visited') }}</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                    </div>
+                @endif
+                @if (session('logged'))
+                    <div class="alert alert-success alert-dismissible w-100" role="alert">
+                        <h6 class="alert-heading d-flex align-items-center fw-bold mb-1">Error!!</h6>
+                        <p class="mb-0">Logged In Successful</p>
+                        <p class="mb-0"><a href="{{ route('auth-logout') }}">Logout</a></p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                    </div>
+                @endif
+                @if (session('errorMsg') != null)
+                    <div class="position-absolute alert alert-danger alert-dismissible w-100" style="z-index: 5; top:40%"
+                        role="alert">
+                        <h6 class="alert-heading d-flex align-items-center fw-bold mb-1">Error!!</h6>
+                        <p class="mb-0">{{ session('errorMsg') }}</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                    </div>
+                @endif
                 <!-- Log In -->
                 <div class="card">
                     <div class="card-body">
