@@ -11,7 +11,7 @@
 <div class="container-xxl">
   <div class="authentication-wrapper authentication-basic container-p-y">
     <div class="authentication-inner">
-      <!-- Register -->
+      <!-- Log In -->
       <div class="card">
         <div class="card-body">
           <!-- Logo -->
@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-    <!-- /Register -->
+    <!-- /Log In -->
   </div>
 </div>
 </div>

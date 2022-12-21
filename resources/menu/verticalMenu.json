@@ -40,6 +40,39 @@
       ]
     },
     {
+      "name": "LayoPaolouts",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "layouts",
+      "submenu": [
+        {
+          "url": "/layouts/without-menu",
+          "name": "Without menu",
+          "slug": "layouts-without-menu"
+        },
+        {
+          "url": "/layouts/without-navbar",
+          "name": "Without navbar",
+          "slug": "layouts-without-navbar"
+        },
+        {
+          "url": "/layouts/container",
+          "name": "Container",
+          "slug": "layouts-container"
+        },
+        {
+          "url": "/layouts/fluid",
+          "name": "Fluid",
+          "slug": "layouts-fluid"
+        },
+        {
+          "url": "/layouts/blank",
+          "name": "Blank",
+          "slug": "layouts-blank",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
       "menuHeader": "Pages"
     },
     {

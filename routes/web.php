@@ -78,3 +78,41 @@ Route::get('/form/layouts-horizontal', $controller_path . '\form_layouts\Horizon
 
 // tables
 Route::get('/tables/basic', $controller_path . '\tables\Basic@index')->name('tables-basic');
+
+
+Route::get('custom', function () {
+    return view('custom');
+});
+
+
+Route::get('/auth/voter/login', function () {
+    
+});
+
+
+
+
+
+
+
+// Newly Created Routes
+
+
+// ADMIN | VOTER
+Route::get( '/logout', $controller_path . '\authentications\Logout@index')->name('auth-logout');
+
+
+// ADMIN
+
+// Authentication 
+Route::match(['get', 'post'], '/admin/auth/login', $controller_path . '\admin\authentications\Login@index')->name('admin-auth-login');
+Route::match(['get', 'post'], '/admin/auth/register', $controller_path . '\admin\authentications\Register@index')->name('admin-auth-register');
+
+
+
+
+// VOTER
+
+// Authentication 
+Route::match(['get', 'post'], '/voter/auth/login', $controller_path . '\voter\authentications\Login@index')->name('voter-auth-login');
+Route::match(['get', 'post'], '/voter/auth/register', $controller_path . '\voter\authentications\Register@index')->name('voter-auth-register');

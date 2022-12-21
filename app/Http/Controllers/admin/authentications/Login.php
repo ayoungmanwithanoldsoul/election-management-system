@@ -7,9 +7,13 @@ use Illuminate\Http\Request;
 
 class Login extends Controller
 {
-  public function index(Request $request)
-  {
-    
-    return view('content.authentications.auth-login');
-  }
+    public function index(Request $request)
+    {
+        if ($request->isMethod('GET')) {
+            return view('content.authentications.auth-login');
+        } else {
+            // Process Data
+        }
+
+    }
 }
