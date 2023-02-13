@@ -1,46 +1,149 @@
 {
-  "menu": [
+  "admin": [
     {
       "url": "/",
       "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard-home"
+    },
+    {
+      "name": "Layouts",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "layouts"
+    }
+  ],
+  "voter": [
+    {
+      "url": "/",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard-home"
+    },
+    {
+      "name": "Layouts",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "layouts"
+    }
+  ],
+  "menu": [
+    {
+      "url": "/",
+      "name": "ADMINDashboard",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard-home"
+    },
+    {
+      "name": "Analytics",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "analytics"
+    },
+    {
+      "name": "Positions",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "positions"
+    },
+    {
+      "name": "Nominees",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "nominees"
+    },
+    {
+      "name": "Voters",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "voters"
+    },
+    {
+      "name": "Election Commitee",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "commitee"
+    },
+    {
+      "menuHeader": "Account"
+    },
+    {
+      "name": "Profile",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "profile"
+    },
+    {
+      "name": "Notifications",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "notifications"
+    },
+    {
+      "name": "Account Settings",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "account-settings"
+    },
+    {
+      "menuHeader": "DIVIDER"
+    },
+    {
+      "url": "/",
+      "name": "USERDashboard",
+      "icon": "menu-icon tf-icons bx bx-home",
+      "slug": "dashboard-home"
+    },
+    {
+      "url": "voter/vote",
+      "name": "Cast a Vote",
+      "icon": "menu-icon tf-icons bx bx-archive-in",
+      "slug": "vote"
+    },
+    {
+      "name": "Analytics",
+      "icon": "menu-icon tf-icons bx bx-line-chart",
+      "slug": "analytics"
+    },
+    {
+      "name": "Positions",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "positions"
+    },
+    {
+      "name": "Nominees",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "nominees"
+    },
+    {
+      "name": "Election Commitee",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "commitee"
+    },
+    {
+      "menuHeader": "Account"
+    },
+    {
+      "name": "Profile",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "profile"
+    },
+    {
+      "name": "Notifications",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "notifications"
+    },
+    {
+      "name": "Account Settings",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "account-settings"
+    },
+    {
+      "menuHeader": "DIVIDER"
+    },
+    {
+      "name": "Layouts",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "layouts"
+    },
+    {
+      "url": "/dashboard",
+      "name": "ORIGDashboard",
       "icon": "menu-icon tf-icons bx bx-home-circle",
       "slug": "dashboard-analytics"
     },
     {
       "name": "Layouts",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "layouts",
-      "submenu": [
-        {
-          "url": "/layouts/without-menu",
-          "name": "Without menu",
-          "slug": "layouts-without-menu"
-        },
-        {
-          "url": "/layouts/without-navbar",
-          "name": "Without navbar",
-          "slug": "layouts-without-navbar"
-        },
-        {
-          "url": "/layouts/container",
-          "name": "Container",
-          "slug": "layouts-container"
-        },
-        {
-          "url": "/layouts/fluid",
-          "name": "Fluid",
-          "slug": "layouts-fluid"
-        },
-        {
-          "url": "/layouts/blank",
-          "name": "Blank",
-          "slug": "layouts-blank",
-          "target": "_blank"
-        }
-      ]
-    },
-    {
-      "name": "LayoPaolouts",
       "icon": "menu-icon tf-icons bx bx-layout",
       "slug": "layouts",
       "submenu": [

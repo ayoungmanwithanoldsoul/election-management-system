@@ -28,12 +28,12 @@ class Register extends Controller
             // Check I.D. Number if it already exist in database
             if ($this->checkId($idnumber, $department)) {
                 return back()->withInput()
-                    ->with('errorMsg', 'I.D. Number already exists. Contact administrator if you think this was a mistake');
+                    ->with('error_message', 'I.D. Number already exists. Contact administrator if you think this was a mistake');
             }
 
             if ($password != $confirmation) {
                 return back()->withInput()
-                    ->with('errorMsg', 'Passwords don\'t match');
+                    ->with('error_message', 'Passwords don\'t match');
             }
 
             // Create password hash
@@ -47,7 +47,7 @@ class Register extends Controller
 
 
             if (!$query) {
-                return redirect()->back()->with('errorMsg', 'We cant create your account right now. Please try again later');
+                return redirect()->back()->with('error_message', 'We cant create your account right now. Please try again later');
             } else {
                 $query =DB::connection($department)
                     ->select('SELECT id, voted, id_number FROM voters WHERE id_number = ? AND hash = ?', [$idnumber, $hash])[0];
@@ -64,7 +64,8 @@ class Register extends Controller
                 'idnumber'   => $query->id_number
             ]);
 
-            return redirect('/vote');
+            return redirect()->route('voter-dashboard-home')
+                ->with('success_message', 'Successfully registered as a voter!');
         }
     }
 

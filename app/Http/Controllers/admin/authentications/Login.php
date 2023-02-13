@@ -22,27 +22,28 @@ class Login extends Controller
             // Check if username exists
             if (sizeof($query) == 0) {
                 return back()->withInput()
-                    ->with('errorMsg', 'Username does not exist. Contact system administrator if yout think this was a mistake');
+                    ->with('error_message', 'Username does not exist. Contact system administrator if yout think this was a mistake');
             }
             $query = $query[0];
+            if (!password_verify($password, $query->hash)) {
+                return back()->withInput()
+                    ->with('error_message', 'Password is incorrect. Contact system administrator if you think this was a mistake');
+
+            }
+
+            // Save session
+            session([
+                'logged'     => true,
+                'user'       => 'admin',
+                'id'         => $query->id,
+                'firstname'  => $query->firstname,
+                'lastname'   => $query->lastname,
+                'department' => $query->department,
+                'username'   => $query->username
+            ]);
+
+            return redirect()->route('admin-dashboard')
+                ->with('success_message', 'Successfully logged in as an administrator!');
         }
-        if (!password_verify($password, $query->hash)) {
-            return back()->withInput()
-                ->with('errorMsg', 'Password is incorrect. Contact system administrator if you think this was a mistake');
-
-        }
-
-        // Save session
-        session([
-            'logged'     => true,
-            'user'       => 'admin',
-            'id'         => $query->id,
-            'firstname'  => $query->firstname,
-            'lastname'   => $query->lastname,
-            'department' => $query->department,
-            'username'   => $query->username
-        ]);
-
-        return redirect()->route('admin-auth-login');
     }
 }

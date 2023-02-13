@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 $controller_path = 'App\Http\Controllers';
 
 // Main Page Route
-Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+Route::get('/dashboard', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
 
 // layout
 Route::get('/layouts/without-menu', $controller_path . '\layouts\WithoutMenu@index')->name('layouts-without-menu');
@@ -80,14 +80,10 @@ Route::get('/form/layouts-horizontal', $controller_path . '\form_layouts\Horizon
 Route::get('/tables/basic', $controller_path . '\tables\Basic@index')->name('tables-basic');
 
 
-Route::get('custom', function () {
-    return view('custom');
-});
-
-
-Route::get('/auth/voter/login', function () {
-    
-});
+Route::get('/test', [
+    'middleware' => 'auth',
+    'uses'       => $controller_path . '\Test\TestController@index'
+]);
 
 
 
@@ -98,21 +94,39 @@ Route::get('/auth/voter/login', function () {
 // Newly Created Routes
 
 
+// Route::group(['middleware' => ['auth']], function ($controller_path = 'App\Http\Controllers') {
+//     Route::get('/test', $controller_path . '\Test\TestController@index');
+// });
+
+
 // ADMIN | VOTER
-Route::get( '/logout', $controller_path . '\authentications\Logout@index')->name('auth-logout');
+Route::get('/logout', $controller_path . '\authentications\Logout@index')->name('auth-logout');
+// Main Page Route
+Route::get('/', $controller_path . '\root\Root@index');
+// Nominees
+Route::get('{user}/candidates', $controller_path . '\pages\Candidates@index')->name('pages-candidates');
 
 
 // ADMIN
 
+// Dashboard
+Route::get('/admin', $controller_path . '\admin\dashboard\Home@index')->name('admin-dashboard-home');
+
 // Authentication 
-Route::match(['get', 'post'], '/admin/auth/login', $controller_path . '\admin\authentications\Login@index')->name('admin-auth-login');
-Route::match(['get', 'post'], '/admin/auth/register', $controller_path . '\admin\authentications\Register@index')->name('admin-auth-register');
+Route::match (['get', 'post'], '/admin/auth/login', $controller_path . '\admin\authentications\Login@index')->name('admin-auth-login');
+Route::match (['get', 'post'], '/admin/auth/register', $controller_path . '\admin\authentications\Register@index')->name('admin-auth-register');
 
 
 
 
 // VOTER
 
+// Dashboard
+Route::get('/voter', $controller_path . '\voter\dashboard\Home@index')->name('voter-dashboard-home');
+
 // Authentication 
-Route::match(['get', 'post'], '/voter/auth/login', $controller_path . '\voter\authentications\Login@index')->name('voter-auth-login');
-Route::match(['get', 'post'], '/voter/auth/register', $controller_path . '\voter\authentications\Register@index')->name('voter-auth-register');
+Route::match (['get', 'post'], '/voter/auth/login', $controller_path . '\voter\authentications\Login@index')->name('voter-auth-login');
+Route::match (['get', 'post'], '/voter/auth/register', $controller_path . '\voter\authentications\Register@index')->name('voter-auth-register');
+
+// Vote Page
+Route::match (['get', 'post'], '/voter/vote', $controller_path . '\voter\vote\Vote@index')->name('voter-vote');

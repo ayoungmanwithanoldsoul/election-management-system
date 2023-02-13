@@ -3485,7 +3485,7 @@
                       </div>
                       <div class="flex-grow-1">
                         <span class="fw-semibold d-block">
-                                                  John Doe
+                                                  {{session('firstname')." ".session('lastname')}}
                                                 </span>
                         <small class="text-muted">Admin</small>
                       </div>

@@ -20,14 +20,14 @@ class Login extends Controller
                 ->select('SELECT * FROM voters WHERE id_number = ?', [$idnumber]);
             if (sizeof($query) == 0) {
                 return back()->withInput()
-                    ->with('errorMsg', 'I.D. Number does not exist. Contact administrator if you think this was a mistake');
+                    ->with('error_message', 'I.D. Number does not exist. Contact administrator if you think this was a mistake');
             }
 
             $query = $query[0];
 
             if (!password_verify($password, $query->hash)) {
                 return back()->withInput()
-                    ->with('errorMsg', 'Password is incorrect. Contact administrator if you think this was a mistake');
+                    ->with('error_message', 'Password is incorrect. Contact administrator if you think this was a mistake');
             }
 
             // Save session
@@ -42,7 +42,8 @@ class Login extends Controller
                 'voted'      => $query->voted,
                 'idnumber'   => $query->id_number
             ]);
-            return redirect()->route('voter-auth-login');
+            return redirect()->route('voter-dashboard-home')
+                ->with('success_message', 'Successfully logged in as a voter!');
         }
 
     }

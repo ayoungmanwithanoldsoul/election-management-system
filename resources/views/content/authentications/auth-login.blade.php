@@ -31,7 +31,11 @@
 @endsection
 
 @section('content')
-    <pre>{{ print $route }}</pre>
+    <pre>{{ print $route }}
+    <br>
+    {{ print_r(session()->all()) }}
+
+    </pre>
     <div class="container-xxl">
         <div class="authentication-wrapper authentication-basic container-p-y">
             <div class="authentication-inner">
@@ -52,15 +56,16 @@
                         </button>
                     </div>
                 @endif
-                @if (session('errorMsg') != null)
+                @if (session('error_message') != null)
                     <div class="position-absolute alert alert-danger alert-dismissible w-100" style="z-index: 5; top:40%"
                         role="alert">
                         <h6 class="alert-heading d-flex align-items-center fw-bold mb-1">Error!!</h6>
-                        <p class="mb-0">{{ session('errorMsg') }}</p>
+                        <p class="mb-0">{{ session('error_message') }}</p>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
                     </div>
                 @endif
+
                 <!-- Log In -->
                 <div class="card">
                     <div class="card-body">
@@ -83,7 +88,7 @@
                             <p class="mb-4">Please sign-in to your {{ $userType }} account to cast a vote</p>
                         @endif
 
-                        <form id="formAuthentication" class="mb-3" action="" method="POST">
+                        <form id="formAuthentication" class="mb-3" action="{{ route($route) }}" method="POST">
                             @csrf
 
                             <div class="mb-3">

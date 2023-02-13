@@ -128,11 +128,11 @@
                         </button>
                     </div>
                 @endif
-                @if (session('errorMsg') != null)
+                @if (session('error_message') != null)
                     <div class="position-absolute alert alert-danger alert-dismissible w-100" style="z-index: 5; top:40%"
                         role="alert">
                         <h6 class="alert-heading d-flex align-items-center fw-bold mb-1">Error!!</h6>
-                        <p class="mb-0">{{ session('errorMsg') }}</p>
+                        <p class="mb-0">{{ session('error_message') }}</p>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
                     </div>

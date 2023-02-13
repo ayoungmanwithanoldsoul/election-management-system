@@ -24,17 +24,17 @@ class Register extends Controller
             // Check the availability of username
             if ($this->checkUsername($username, $department)) {
                 return back()->withInput()
-                    ->with('errorMsg', 'Username already exists. Please choose a unique username');
+                    ->with('error_message', 'Username already exists. Please choose a unique username');
             }
 
             // Check auth key
             if ($this->checkAuthKey($authkey)) {
-                return back()->with('errorMsg', "Incorrect Authentication Key");
+                return back()->with('error_message', "Incorrect Authentication Key");
             }
 
             // Check if passwords match
             if ($confirmation != $password) {
-                return back()->with('errorMsg', "Passwords don\'t match");
+                return back()->with('error_message', "Passwords don\'t match");
             }
 
             $hash = password_hash($password, PASSWORD_DEFAULT);
@@ -45,7 +45,7 @@ class Register extends Controller
                     [$firstname, $lastname, $department, $username, $hash]
                 );
             if (!$query) {
-                return redirect()->back()->with('errorMsg', 'Error creating cdministrator account. Please Try Again Later');
+                return redirect()->back()->with('error_message', 'Error creating cdministrator account. Please Try Again Later');
             }
             $query = DB::connection($department)
                 ->select('SELECT * FROM admins WHERE username = ? AND hash = ?', [$username, $hash])[0];
@@ -61,12 +61,13 @@ class Register extends Controller
                 'username'   => $query->username
             ]);
 
-            return redirect()->route('admin-auth-login');
+            return redirect()->route('admin-dashboard')
+                ->with('success_message', 'Successfully registered as an administrator!');
         }
 
     }
 
-    private function checkUsername(int $username, string $department)
+    private function checkUsername(string $username, string $department)
     {
         // Check the availability of username
         $query = DB::connection($department)
