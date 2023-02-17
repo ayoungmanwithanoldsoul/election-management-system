@@ -4,7 +4,7 @@
 
 ![alt text](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg "Laravel")
 ### Introduction
-Conducting Student/Pupil Government Election is a bit complicated especially when done usign the traditional ballot and paper method. Most school siun the Philippines still utilize the traditional method when conducting elections. To tackle this problem I created an election management system suitable for this stiation.This election management system is compliant to the specifications of DepEd Philippines.
+Conducting Student/Pupil Government Election is a bit complicated especially when done usign the traditional ballot and paper method. Most schools in the Philippines still utilize the traditional method when conducting elections. To tackle this problem I created an election management system suitable for this situation.This election management system is compliant to the specifications of DepEd Philippines.
 
 ##### Technologies utilized:
 
@@ -84,6 +84,9 @@ Conducting Student/Pupil Government Election is a bit complicated especially whe
 ![alt-text](./screenshots/Screenshot%20(88).png)
 ![alt-text](./screenshots/Screenshot%20(89).png)
 ![alt-text](./screenshots/Screenshot%20(90).png)
+
+## About CS50x
+CS50x is a highly recommended computer science introductory course from Harvard University taught by David Malan. By the end of the course, students will learn how to think algorithmically, and solve complex problems efficiently. Its topics include abstraction, algorithms, data structures, encapsulation, resource management, cybersecurity, web development, and software engineering. The course starts by teaching students a language called C which is the basis of todays programming language. It then transitions, to a more friendly higher-level programming language called Python that is similar to C. After that it introduces SQL for storing and managing databases, thereafter, for frontend development it introduces HTML, CSS and Javascript to create a responsive and more dynamic contents for your web app. Finally at the end of the course is the final project which summarizes all of the concepts that you've leanred throughout the duration of the course.
 
 ## License
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
