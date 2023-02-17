@@ -16,7 +16,7 @@
 
 
 @section('content')
-<pre>{{ print_r($menuData) }}</pre>
+{{-- <pre>{{ print_r($menuData) }}</pre> --}}
     <div class="row">
         @if (session('success_message'))
             <div class="alert alert-success alert-dismissible w-100" role="alert">

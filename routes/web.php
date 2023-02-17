@@ -104,7 +104,19 @@ Route::get('/logout', $controller_path . '\authentications\Logout@index')->name(
 // Main Page Route
 Route::get('/', $controller_path . '\root\Root@index');
 // Nominees
-Route::get('{user}/candidates', $controller_path . '\pages\Candidates@index')->name('pages-candidates');
+// Route::get('{user}/candidates', $controller_path . '\pages\Candidates@index')->name('pages-candidates');
+
+$user = "dkwkd";
+// List of Voters
+Route::match (['get', 'post'], 'admin/pages/voters', $controller_path . '\pages\Voters@index')->name('admin-pages-voters');
+Route::match (['get', 'post'], 'voter/pages/voters', $controller_path . '\pages\Voters@index')->name('voter-pages-voters');
+// List of Candidates
+Route::match (['get', 'post'], 'admin/pages/candidates', $controller_path . '\pages\Candidates@index')->name('admin-pages-candidates');
+Route::match (['get', 'post'], 'voter/pages/candidates', $controller_path . '\pages\Candidates@index')->name('voter-pages-candidates');
+
+// Positions
+Route::match (['get', 'post'], '/admin/pages/positions', $controller_path . '\pages\Positions@index')->name('admin-pages-positions');
+Route::match (['get', 'post'], '/voter/pages/positions', $controller_path . '\pages\Positions@index')->name('voter-pages-positions');
 
 
 // ADMIN
@@ -112,7 +124,7 @@ Route::get('{user}/candidates', $controller_path . '\pages\Candidates@index')->n
 // Dashboard
 Route::get('/admin', $controller_path . '\admin\dashboard\Home@index')->name('admin-dashboard-home');
 
-// Authentication 
+// Authentication
 Route::match (['get', 'post'], '/admin/auth/login', $controller_path . '\admin\authentications\Login@index')->name('admin-auth-login');
 Route::match (['get', 'post'], '/admin/auth/register', $controller_path . '\admin\authentications\Register@index')->name('admin-auth-register');
 
@@ -124,7 +136,7 @@ Route::match (['get', 'post'], '/admin/auth/register', $controller_path . '\admi
 // Dashboard
 Route::get('/voter', $controller_path . '\voter\dashboard\Home@index')->name('voter-dashboard-home');
 
-// Authentication 
+// Authentication
 Route::match (['get', 'post'], '/voter/auth/login', $controller_path . '\voter\authentications\Login@index')->name('voter-auth-login');
 Route::match (['get', 'post'], '/voter/auth/register', $controller_path . '\voter\authentications\Register@index')->name('voter-auth-register');
 

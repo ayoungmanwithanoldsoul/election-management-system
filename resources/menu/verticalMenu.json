@@ -1,5 +1,5 @@
 {
-  "admin": [
+  "menu": [
     {
       "url": "/",
       "name": "Dashboard",
@@ -16,76 +16,11 @@
     {
       "url": "/",
       "name": "Dashboard",
-      "icon": "menu-icon tf-icons bx bx-home-circle",
-      "slug": "dashboard-home"
-    },
-    {
-      "name": "Layouts",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "layouts"
-    }
-  ],
-  "menu": [
-    {
-      "url": "/",
-      "name": "ADMINDashboard",
-      "icon": "menu-icon tf-icons bx bx-home-circle",
-      "slug": "dashboard-home"
-    },
-    {
-      "name": "Analytics",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "analytics"
-    },
-    {
-      "name": "Positions",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "positions"
-    },
-    {
-      "name": "Nominees",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "nominees"
-    },
-    {
-      "name": "Voters",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "voters"
-    },
-    {
-      "name": "Election Commitee",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "commitee"
-    },
-    {
-      "menuHeader": "Account"
-    },
-    {
-      "name": "Profile",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "profile"
-    },
-    {
-      "name": "Notifications",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "notifications"
-    },
-    {
-      "name": "Account Settings",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "account-settings"
-    },
-    {
-      "menuHeader": "DIVIDER"
-    },
-    {
-      "url": "/",
-      "name": "USERDashboard",
       "icon": "menu-icon tf-icons bx bx-home",
       "slug": "dashboard-home"
     },
     {
-      "url": "voter/vote",
+      "url": "/vote",
       "name": "Cast a Vote",
       "icon": "menu-icon tf-icons bx bx-archive-in",
       "slug": "vote"
@@ -96,14 +31,16 @@
       "slug": "analytics"
     },
     {
+      "url": "/pages/positions",
       "name": "Positions",
       "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "positions"
+      "slug": "pages-positions"
     },
     {
+      "url": "/pages/candidates",
       "name": "Nominees",
       "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "nominees"
+      "slug": "pages-candidates"
     },
     {
       "name": "Election Commitee",
@@ -127,6 +64,65 @@
       "name": "Account Settings",
       "icon": "menu-icon tf-icons bx bx-layout",
       "slug": "account-settings"
+    }
+  ],
+  "admin": [
+    {
+      "url": "/",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard-home"
+    },
+    {
+      "name": "Analytics",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "analytics"
+    },
+    {
+      "url": "/pages/positions",
+      "name": "Positions",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "pages-positions"
+    },
+    {
+      "url": "/pages/candidates",
+      "name": "Nominees",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "pages-candidates"
+    },
+    {
+      "url": "/pages/voters",
+      "name": "Voters",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "pages-voters"
+    },
+    {
+      "name": "Election Commitee",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "commitee"
+    },
+    {
+      "menuHeader": "Account"
+    },
+    {
+      "name": "Profile",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "profile"
+    },
+    {
+      "name": "Notifications",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "notifications"
+    },
+    {
+      "name": "Account Settings",
+      "icon": "menu-icon tf-icons bx bx-layout",
+      "slug": "account-settings"
+    }
+  ],
+  "adnothermenu": [
+    {
+      "menuHeader": "DIVIDER"
     },
     {
       "menuHeader": "DIVIDER"

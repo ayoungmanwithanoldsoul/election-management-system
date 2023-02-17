@@ -6,11 +6,12 @@
     } else {
         $userType = 'voter';
     }
+    // $userType = Str::ucfirst($userType);
 @endphp
 
 @extends('layouts/blankLayout')
 
-@section('title', 'Login {{ ucfirst($userType) }}')
+@section('title', "Login")
 
 @section('page-style')
     <!-- Page -->

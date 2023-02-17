@@ -19,19 +19,19 @@
     <ul class="menu-inner py-1">
         @php
             if (session('logged') && session('user') === 'admin') {
-                $useMenu = 'menu';
+                $useMenu = 'admin';
                 $userSlug = 'admin-';
                 $userUrl = '/admin';
             } elseif (session('logged') && session('user') === 'voter') {
-                $useMenu = 'menu';
-                $userSlug = '';//'voter-';
-                $userUrl = '';//'/voter';
+                $useMenu = 'voter';
+                $userSlug ='voter-';
+                $userUrl = '/voter';
             } else {
                 $useMenu = 'menu';
                 $userSlug = '';
                 $userUrl = '';
             }
-            
+
         @endphp
         @foreach ($menuData[0]->{$useMenu} as $menu)
             {{-- adding active and open class if child is active --}}
@@ -46,7 +46,7 @@
                 @php
                     $activeClass = null;
                     $currentRouteName = Route::currentRouteName();
-                    
+
                     if ($currentRouteName === $userSlug . $menu->slug) {
                         $activeClass = 'active';
                     } elseif (isset($menu->submenu)) {

@@ -29,7 +29,7 @@ class Login extends Controller
                 return back()->withInput()
                     ->with('error_message', 'Password is incorrect. Contact system administrator if you think this was a mistake');
 
-            }
+        	}
 
             // Save session
             session([
@@ -42,7 +42,7 @@ class Login extends Controller
                 'username'   => $query->username
             ]);
 
-            return redirect()->route('admin-dashboard')
+            return redirect()->route('admin-dashboard-home')
                 ->with('success_message', 'Successfully logged in as an administrator!');
         }
     }

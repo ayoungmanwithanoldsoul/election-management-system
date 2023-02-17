@@ -1,64 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Election Management System
+## CS50x Final Project
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+![alt text](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg "Laravel")
+### Introduction
+Conducting Student/Pupil Government Election is a bit complicated especially when done usign the traditional ballot and paper method. Most school siun the Philippines still utilize the traditional method when conducting elections. To tackle this problem I created an election management system suitable for this stiation.This lection management system is compliant to the specifications of DepEd Philippines.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+##### Technologies utilized:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- PHP 8
+- Laravel 9
+- Bootstrap 4
+- MySQLi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##### Technical Specifications
+- ###### Routing:
+    This web app uses the framework routing method of laravel itself. All of the app's routes are defined in the `web.php`.
+- ###### Cross-site Request Forgery
+    Utlizing the power of laravel, we can now  protect our HTML forms from X-site request forgeries by using the laravel `@csrf` feature:
+```HTML
+<form method="POST" action="/profile">
+    @csrf
+</form>
+```
+- ###### Database
+    This web app uses mysqli for storing and retrieving information for users.
+- ###### Session
+    This web app uses cookies as a way of storing browser sessions.
 
-## Learning Laravel
+#### Features
+##### Admin
+- Login
+- Register
+- Manage available positions
+- Manage running candidates
+- Manage registered voters
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+##### Voter
+- Login
+- Register
+- Cast a vote
+- View ballot option after voting
+- View election positions
+- View voters
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+##### Future updates
+- Dashboard
+- Profile page
+- Account settings
+- Analytics
+- Search Function
+- Voter Information
+- Candidate profile
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### Screenshots
+![alt-text](./screenshots/Screenshot%20(74).png)
+![alt-text](./screenshots/Screenshot%20(75).png)
+![alt-text](./screenshots/Screenshot%20(76).png)
+![alt-text](./screenshots/Screenshot%20(77).png)
+![alt-text](./screenshots/Screenshot%20(78).png)
+![alt-text](./screenshots/Screenshot%20(79).png)
+![alt-text](./screenshots/Screenshot%20(81).png)
+![alt-text](./screenshots/Screenshot%20(82).png)
+![alt-text](./screenshots/Screenshot%20(83).png)
+![alt-text](./screenshots/Screenshot%20(84).png)
+![alt-text](./screenshots/Screenshot%20(85).png)
+![alt-text](./screenshots/Screenshot%20(86).png)
+![alt-text](./screenshots/Screenshot%20(87).png)
+![alt-text](./screenshots/Screenshot%20(88).png)
+![alt-text](./screenshots/Screenshot%20(89).png)
+![alt-text](./screenshots/Screenshot%20(90).png)
 
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
