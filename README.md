@@ -59,14 +59,23 @@ Conducting Student/Pupil Government Election is a bit complicated especially whe
 - Candidate profile
 
 #### Screenshots
+- Vote page
 ![alt-text](./screenshots/Screenshot%20(74).png)
+- Nominees/Candidates page
 ![alt-text](./screenshots/Screenshot%20(75).png)
+- Voter login page
 ![alt-text](./screenshots/Screenshot%20(76).png)
+- Voter registration page
 ![alt-text](./screenshots/Screenshot%20(77).png)
+- Admin login page
 ![alt-text](./screenshots/Screenshot%20(78).png)
+- Admin Registration page
 ![alt-text](./screenshots/Screenshot%20(79).png)
+- Vote page (already voted)
 ![alt-text](./screenshots/Screenshot%20(81).png)
+
 ![alt-text](./screenshots/Screenshot%20(82).png)
+- Responsive designs
 ![alt-text](./screenshots/Screenshot%20(83).png)
 ![alt-text](./screenshots/Screenshot%20(84).png)
 ![alt-text](./screenshots/Screenshot%20(85).png)
