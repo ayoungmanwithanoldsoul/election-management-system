@@ -3,7 +3,7 @@
 
 
 ![alt text](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg "Laravel")
-#### Video Demo: https://youtu.be/o_BrMlIlWps
+#### Video Demo: https://youtu.be/o_BrMlIlWpss
 #### Description:
 Conducting Student/Pupil Government Election is a bit complicated especially when done usign the traditional ballot and paper method. Most schools in the Philippines still utilize the traditional method when conducting elections. To tackle this problem I created an election management system suitable for this situation.This election management system is compliant to the specifications of DepEd Philippines.
 
