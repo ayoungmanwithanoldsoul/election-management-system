@@ -89,5 +89,7 @@ Conducting Student/Pupil Government Election is a bit complicated especially whe
 ## About CS50x
 CS50x is a highly recommended computer science introductory course from Harvard University taught by David Malan. By the end of the course, students will learn how to think algorithmically, and solve complex problems efficiently. Its topics include abstraction, algorithms, data structures, encapsulation, resource management, cybersecurity, web development, and software engineering. The course starts by teaching students a language called C which is the basis of todays programming language. It then transitions, to a more friendly higher-level programming language called Python that is similar to C. After that it introduces SQL for storing and managing databases, thereafter, for frontend development it introduces HTML, CSS and Javascript to create a responsive and more dynamic contents for your web app. Finally at the end of the course is the final project which summarizes all of the concepts that you've leanred throughout the duration of the course.
 
+#### CS50X certificate: https://cs50.harvard.edu/certificates/755aa01b-834f-4ab8-8e78-07569ee1197c
+
 ## License
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
